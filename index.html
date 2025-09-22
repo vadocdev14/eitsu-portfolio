@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eitsu | Developer</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+:root {
+  --primary: #0a192f;
+  --secondary: #112240;
+  --accent: #64ffda;
+  --text-primary: #e6f1ff;
+  --text-secondary: #8892b0;
+}
+
+body { background-color: var(--primary); color: var(--text-primary); line-height: 1.6; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+header { padding: 30px 0; position: fixed; width: 100%; background-color: rgba(10, 25, 47, 0.9); z-index: 1000; backdrop-filter: blur(10px); }
+
+nav { display: flex; justify-content: space-between; align-items: center; }
+
+.logo { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+
+.nav-links { display: flex; list-style: none; }
+
+.nav-links li { margin-left: 30px; }
+
+.nav-links a { color: var(--text-primary); text-decoration: none; transition: color 0.3s; font-weight: 500; }
+.nav-links a:hover { color: var(--accent); }
+
+.hero { padding: 180px 0 100px; text-align: center; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.hero h2 { font-size: 1.8rem; color: var(--text-secondary); margin-bottom: 30px; }
+.highlight { color: var(--accent); }
+
+.about { padding: 100px 0; display: flex; align-items: center; gap: 50px; }
+.about-content { flex: 1; }
+.about h2 { font-size: 2.5rem; margin-bottom: 20px; position: relative; display: inline-block; }
+.about h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 3px; background-color: var(--accent); }
+.about p { color: var(--text-secondary); margin-bottom: 20px; font-size: 1.1rem; }
+.about-image { flex: 1; text-align: center; }
+.profile-img { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); box-shadow: 0 0 30px rgba(100, 255, 218, 0.2); }
+
+.skills { padding: 100px 0; background-color: var(--secondary); }
+.skills h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; position: relative; display: inline-block; left: 50%; transform: translateX(-50%); }
+.skills h2::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background-color: var(--accent); }
+.skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.skill-category { background-color: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 10px; transition: transform 0.3s; }
+.skill-category:hover { transform: translateY(-10px); }
+.skill-category h3 { font-size: 1.5rem; margin-bottom: 20px; color: var(--accent); display: flex; align-items: center; }
+.skill-category h3 i { margin-right: 10px; }
+.skill-item { margin-bottom: 15px; }
+.skill-name { display: flex; justify-content: space-between; margin-bottom: 5px; }
+.skill-bar { height: 8px; background-color: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden; }
+.skill-level { height: 100%; background-color: var(--accent); border-radius: 4px; }
+
+footer { padding: 30px 0; text-align: center; background-color: var(--secondary); color: var(--text-secondary); font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+  .about { flex-direction: column; }
+  .hero h1 { font-size: 2.5rem; }
+  .hero h2 { font-size: 1.4rem; }
+  .profile-img { width: 250px; height: 250px; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">Eitsu</div>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="container">
+<h1>Hi, ich bin <span class="highlight">Eitsu</span></h1>
+<h2>Full-Stack Developer & Problem Solver</h2>
+<p>Ich erstelle innovative digitale Lösungen mit modernsten Technologien</p>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container">
+<div class="about-content">
+<h2>About Me</h2>
+<p>Hallo! Ich bin Eitsu, ein leidenschaftlicher Developer mit Fokus auf Full-Stack Webentwicklung. Mit mehreren Jahren Erfahrung in der Branche liebe ich es, komplexe Probleme mit eleganten Code-Lösungen zu bewältigen.</p>
+<p>Meine Reise in der Softwareentwicklung begann mit der Neugier, zu verstehen, wie Technologie funktioniert, und hat sich zu einer Leidenschaft für das Erstellen benutzerfreundlicher und effizienter Anwendungen entwickelt.</p>
+<p>Wenn ich nicht code, erkunde ich gerne neue Technologien, arbeite an Open-Source-Projekten oder genieße die Natur.</p>
+</div>
+<div class="about-image">
+<div class="profile-img" style="background: linear-gradient(45deg, #64ffda, #0a192f); display: flex; align-items: center; justify-content: center;">
+<i class="fas fa-user" style="font-size: 100px; color: #112240;"></i>
+</div>
+</div>
+</div>
+</section>
+
+<section class="skills" id="skills">
+<div class="container">
+<h2>Skills</h2>
+<div class="skills-container">
+
+<div class="skill-category">
+<h3><i class="fas fa-code"></i> Frontend</h3>
+<div class="skill-item">
+<div class="skill-name"><span>HTML/CSS</span> <span>95%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-name"><span>JavaScript</span> <span>90%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-name"><span>React</span> <span>85%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-name"><span>Vue.js</span> <span>80%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+</div>
+</div>
+
+<div class="skill-category">
+<h3><i class="fas fa-server"></i> Backend</h3>
+<div class="skill-item">
+<div class="skill-name"><span>Node.js</span> <span>90%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-name"><span>Python</span> <span>85%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-name"><span>PHP</span> <span>75%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-name"><span>Database Design</span> <span>85%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+</div>
+</div>
+
+<div class="skill-category">
+<h3><i class="fas fa-tools"></i> Tools & Other</h3>
+<div class="skill-item">
+<div class="skill-name"><span>Git</span> <span>90%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-name"><span>Docker</span> <span>80%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-name"><span>UI/UX Design</span> <span>75%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+</div>
+<div class="skill-item">
+<div class="skill-name"><span>Agile Methodologies</span> <span>85%</span></div>
+<div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>&copy; 2025 Copyright Eitsu</p>
+</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const skillBars = document.querySelectorAll('.skill-level');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const width = entry.target.style.width;
+        entry.target.style.width = '0';
+        setTimeout(() => {
+          entry.target.style.width = width;
+        }, 300);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  skillBars.forEach(bar => {
+    observer.observe(bar);
+  });
+});
+</script>
+
+</body>
+</html>
